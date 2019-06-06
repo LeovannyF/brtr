@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import store from '../store';
+import React, { Component } from 'react';
+// import store from '../store';
 import {connect} from 'react-redux';
 import LoginUser from './LoginUser'
 

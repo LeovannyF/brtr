@@ -1,8 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux'; 
-import store from '../store';
-import {Link} from 'react-router-dom';
+// import store from '../store';
+// import {Link} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
+import firebase from 'firebase';
+import TextField from '@material-ui/core/TextField';
 
 class TaskForm extends Component {
     constructor(){

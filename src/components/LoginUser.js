@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import store from '../store';
-import PropTypes from 'prop-types';
-import classNames from 'classnames';
+// import store from '../store';
+// import PropTypes from 'prop-types';
+// import classNames from 'classnames';
 import {Redirect} from 'react-router';
-import {withRouter} from 'react-router-dom';
-import { withStyles } from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
+// import {withRouter} from 'react-router-dom';
+// import { withStyles } from '@material-ui/core/styles';
+// import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import {Link} from 'react-router-dom';
+import firebase from 'firebase';
 
 
 const auth = firebase.auth();
@@ -34,7 +35,7 @@ class LoginUser extends Component {
         {emailAddress === undefined ? (
            <div style={{flexWrap:'nowrap', textAlign:'center' }}> 
            <div> 
-           <img src={`../../dist/Images/brtr-logo.png`} style={{height:'250px', margin: '10px 0px 0px 30px' }}/>
+           <img src="./Images/brtr-logo.png" alt="brtr logo" style={{height:'250px', margin: '10px 0px 0px 30px' }}/>
            </div>
            <div style={{flexWrap:'nowrap', textAlign:'center' }}>
              <br/>

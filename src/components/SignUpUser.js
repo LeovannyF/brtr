@@ -1,16 +1,17 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import {connect} from 'react-redux';
 import store, {getUser, clearUser} from '../store';
-import PropTypes from 'prop-types';
-import{Link, Redirect} from 'react-router-dom';
-import classNames from 'classnames';
-import {withStyles} from '@material-ui/core/styles';
-import MenuItem from '@material-ui/core/MenuItem';
+// import PropTypes from 'prop-types';
+// import{Link, Redirect} from 'react-router-dom';
+// import classNames from 'classnames';
+// import {withStyles} from '@material-ui/core/styles';
+// import MenuItem from '@material-ui/core/MenuItem';
 import TextField from '@material-ui/core/TextField';
-import Paper from '@material-ui/core/Paper';
+// import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import Button from '@material-ui/core/Button';
 import Profile from './Profile';
+import firebase from 'firebase';
 
 //firebase recommends not using the uid proved to authenticate a user. I will be authenticating with email for now.
 
@@ -46,7 +47,7 @@ class SignUpUser extends Component {
 
         <div style={{flexWrap:'nowrap', textAlign:'center' }}>
       <div> 
-       <img src={`../../dist/Images/brtr-logo.png`} style={{height:'250px', margin: '10px 0px 0px 30px' }}/>
+       <img src="./Images/brtr-logo.png" alt="brtr logo"></img> style={{height:'250px', margin: '10px 0px 0px 30px' }}/>
       </div>
       <br/>
         <Typography style={{ display: 'inline', margin: '10px 10px 10px 35px'}} variant="h5" component="h3">

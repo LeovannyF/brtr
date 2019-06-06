@@ -1,11 +1,21 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
-const firestore = firebase.firestore();
-const settings = {/* your settings... */ timestampsInSnapshots: true};
-firestore.settings(settings);
+import * as firebase from 'firebase';
+import 'firebase/firestore';
 
-const app = firebase.app();
+let config = {
+  apiKey: "AIzaSyCLX0v8AWGojFL32oSmbTsJgZLfzdg0xt8",
+  authDomain: "brtr-6f18a.firebaseapp.com",
+  databaseURL: "https://brtr-6f18a.firebaseio.com",
+  projectId: "brtr-6f18a",
+  storageBucket: "brtr-6f18a.appspot.com",
+  messagingSenderId: "692321325646"
+};
+
+firebase.initializeApp(config);
+
+// const app = firebase.app();
 const db = firebase.firestore();
 
 const myUsers = db.collection('users')

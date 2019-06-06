@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import taskForm from "./taskForm";
-import sharedInstance from "jss";
+// import taskForm from "./taskForm";
+// import sharedInstance from "jss";
 import LandingPage from "./LandingPage";
 
 class Profile extends Component {

@@ -1,5 +1,5 @@
-import React, {Component} from 'react';
-import {render} from 'react-dom';
+import React, { Component } from 'react';
+// import {render} from 'react-dom';
 import {connect, Provider} from 'react-redux';
 import {Switch, Route, HashRouter} from 'react-router-dom';
 import store, {loadUsers, loadTasks, getUser} from '../store';
@@ -10,6 +10,7 @@ import SignUpUser from './SignUpUser';
 import LandingPage from './LandingPage';
 import Profile from './Profile';
 import Tasks from './Tasks';
+import firebase from 'firebase';
 
 
 const firestore = firebase.firestore();
