@@ -47,7 +47,7 @@ class SignUpUser extends Component {
 
         <div style={{flexWrap:'nowrap', textAlign:'center' }}>
       <div> 
-       <img src="./Images/brtr-logo.png" alt="brtr logo"></img> style={{height:'250px', margin: '10px 0px 0px 30px' }}/>
+       <img src="./Images/brtr-logo.png" alt="brtr logo" style={{height:'250px', margin: '10px 0px 0px 30px' }}/>
       </div>
       <br/>
         <Typography style={{ display: 'inline', margin: '10px 10px 10px 35px'}} variant="h5" component="h3">
