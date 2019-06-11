@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {connect, Provider} from 'react-redux';
+import {connect} from 'react-redux';
 import Card from '@material-ui/core/Card';
 import CardActions from '@material-ui/core/CardActions';
 import CardContent from '@material-ui/core/CardContent';

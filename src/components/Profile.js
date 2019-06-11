@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-// import taskForm from "./taskForm";
+import TaskForm from "./taskForm";
 // import sharedInstance from "jss";
 import LandingPage from "./LandingPage";
 
@@ -13,11 +13,14 @@ class Profile extends Component {
           { emailAddress === undefined ? (
               <LandingPage />
           ) : (
-            <div> 
-            <p>{firstName}</p>
-            <p>{lastName}</p>
-            <p>{emailAddress}</p>
-            </div> 
+            <div>
+              <div> 
+              <p>{firstName}</p>
+              <p>{lastName}</p>
+              <p>{emailAddress}</p>
+              </div> 
+              <TaskForm/>
+            </div>
           )
           }
       </div>

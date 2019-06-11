@@ -1,11 +1,12 @@
 import {createStore, applyMiddleware, combineReducers} from 'redux';
 import logger from 'redux-logger';
 import thunk from 'redux-thunk';
+import {firebaseKey} from './APIkeys';
 import * as firebase from 'firebase';
 import 'firebase/firestore';
 
 let config = {
-  apiKey: "AIzaSyCLX0v8AWGojFL32oSmbTsJgZLfzdg0xt8",
+  apiKey: firebaseKey,
   authDomain: "brtr-6f18a.firebaseapp.com",
   databaseURL: "https://brtr-6f18a.firebaseio.com",
   projectId: "brtr-6f18a",
@@ -120,6 +121,9 @@ const UserReducer = (state = [], action) => {
     case LOAD_USERS:
     state = action.userList
     break;
+
+    default:
+    // do nothing
   }
   return state;
 }
@@ -129,6 +133,9 @@ const TaskReducer = (state = [], action) => {
     case LOAD_TASKS:
     state = action.taskList;
     break;
+
+    default:
+    // do nothing
   }
   return state;
 }
@@ -138,6 +145,9 @@ const LoggedIn =(state = {}, action) => {
     case LOGGEDIN_USER:
     state = action.user
     break;
+
+    default:
+    // do nothing
   }
   return state;
 }

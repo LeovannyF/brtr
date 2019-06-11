@@ -3,7 +3,7 @@ import {connect} from 'react-redux';
 // import store from '../store';
 // import {Link} from 'react-router-dom';
 import Typography from '@material-ui/core/Typography';
-import firebase from 'firebase';
+// import firebase from 'firebase';  this will need to be connected to the database eventually. 
 import TextField from '@material-ui/core/TextField';
 
 class TaskForm extends Component {
@@ -15,8 +15,8 @@ class TaskForm extends Component {
             discription:'',
             perferredDate:''
         }
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
+        // this.handleChange = this.handleChange.bind(this);
+        // this.handleSubmit = this.handleSubmit.bind(this);
     }
     render(){
         return(
@@ -26,12 +26,12 @@ class TaskForm extends Component {
                 Create Task
             </Typography>
                 <form onSubmit={this.handleSubmit}> 
-                <TextField
-                name='description'
-                value={this.state.discription}
+                <TextField  
+                name='First Name'
+                value={this.state.creatorName}
                 onChange={this.handleChange}
                 id="outlined-full-width"
-                label="discription"
+                label="First Name"
                 style={{ margin: '10px 0px 0px 30px' }}
                 placeholder="first name"
                 margin="normal"
@@ -39,7 +39,23 @@ class TaskForm extends Component {
                 InputLabelProps={{
                 shrink: true,
                 }}
-            />
+                />
+                <TextField  
+                name='description'
+                value={this.state.discription}
+                onChange={this.handleChange}
+                id="outlined-multiline-flexible"
+                label="discription"
+                style={{ margin: '10px 0px 0px 30px' }}
+                placeholder="description"
+                margin="normal"
+                variant="outlined"
+                multiline
+                rowsMax="4"
+                InputLabelProps={{
+                shrink: true,
+                }}
+                />
 
                 </form>
           </div>

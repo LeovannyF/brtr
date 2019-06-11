@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import {connect} from 'react-redux';
-import store, {getUser, clearUser} from '../store';
+import store, {getUser} from '../store'; //clearUser was here before, I cannot remember what that was it was for and being used for.
 // import PropTypes from 'prop-types';
 // import{Link, Redirect} from 'react-router-dom';
 // import classNames from 'classnames';

@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 // import {render} from 'react-dom';
-import {connect, Provider} from 'react-redux';
-import {Switch, Route, HashRouter} from 'react-router-dom';
-import store, {loadUsers, loadTasks, getUser} from '../store';
+import {connect} from 'react-redux';
+import { Route, HashRouter} from 'react-router-dom'; //Switch was not being used, removed it
+import store, {loadUsers, loadTasks} from '../store'; // getUser was here, I thought I was using it for something, but I cannot remember what it was for
 import NavBar from './NavBar';
 import LoginUser from './LoginUser';
 import HomePage from './HomePage';

@@ -25,3 +25,10 @@ public/main.js
 main.js.map
 package-lock.json
 public
+/dist
+APIKeys.js
+
+# firebase
+.firebase
+.firebaserc
+firebase.json

@@ -41,6 +41,7 @@ class Navbar extends Component {
              <Button><Link to='/profile' style={{textDecoration:'none', color:'white'}}>My Profile</Link> </Button>
              <Button> <Link to ='/tasks' style={{textDecoration: 'none', color:'white'}}>Tasks</Link> </Button>
              <Button> <Link to ='/services' style={{textDecoration: 'none', color:'white'}}>Services</Link> </Button>
+             <Button> Messages </Button>
              <Button> <Link to = '/login' style={{textDecoration: 'none', color:'white'}}> Log In </Link> </Button> 
            </Toolbar>
          </AppBar>
