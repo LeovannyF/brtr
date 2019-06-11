@@ -27,6 +27,9 @@ package-lock.json
 public
 /dist
 APIKeys.js
+/public/index.html
+
+
 
 # firebase
 .firebase
