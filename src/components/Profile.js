@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import TaskForm from "./taskForm";
 // import sharedInstance from "jss";
 import LandingPage from "./LandingPage";
+import CurrentUserTasks from "./CurrentUserTasks";
 
 class Profile extends Component {
 
@@ -19,7 +20,12 @@ class Profile extends Component {
               <p>{lastName}</p>
               <p>{emailAddress}</p>
               </div> 
-              <TaskForm/>
+                <div>
+                <TaskForm/>
+                </div>
+                  <div>
+                  <CurrentUserTasks/>
+                  </div>
             </div>
           )
           }

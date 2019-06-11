@@ -5,8 +5,13 @@ import {connect} from 'react-redux';
 import Typography from '@material-ui/core/Typography';
 // import firebase from 'firebase';  this will need to be connected to the database eventually. 
 import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
+
+
 
 class TaskForm extends Component {
+
+
     constructor(){
         super()
         this.state = {
@@ -19,6 +24,7 @@ class TaskForm extends Component {
         // this.handleSubmit = this.handleSubmit.bind(this);
     }
     render(){
+
         return(
           <div>
           <br/>
@@ -26,6 +32,7 @@ class TaskForm extends Component {
                 Create Task
             </Typography>
                 <form onSubmit={this.handleSubmit}> 
+            
                 <TextField  
                 name='First Name'
                 value={this.state.creatorName}
@@ -41,13 +48,27 @@ class TaskForm extends Component {
                 }}
                 />
                 <TextField  
-                name='description'
+                name='Subject'
+                value={this.state.creatorName}
+                onChange={this.handleChange}
+                id="outlined-full-width"
+                label="Subject"
+                style={{ margin: '10px 0px 0px 30px' }}
+                placeholder="Subject"
+                margin="normal"
+                variant="outlined"
+                InputLabelProps={{
+                shrink: true,
+                }}
+                />
+                <TextField  
+                name=' task description'
                 value={this.state.discription}
                 onChange={this.handleChange}
                 id="outlined-multiline-flexible"
-                label="discription"
+                label="task description"
                 style={{ margin: '10px 0px 0px 30px' }}
-                placeholder="description"
+                placeholder="task description"
                 margin="normal"
                 variant="outlined"
                 multiline
@@ -56,8 +77,11 @@ class TaskForm extends Component {
                 shrink: true,
                 }}
                 />
-
+                <Button variant="outlined" size="medium" color="primary">
+                    Submit
+                </Button>
                 </form>
+
           </div>
         )
     }
