@@ -156,7 +156,7 @@ class SignUpUser extends Component {
           lastName:'',
           email:'',
           password:'',
-          loggedInSuccessfull:true
+          loggedInSuccessfull:true // may not need this
         })
     )
   }

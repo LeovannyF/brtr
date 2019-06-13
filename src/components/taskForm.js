@@ -6,22 +6,25 @@ import Typography from '@material-ui/core/Typography';
 // import firebase from 'firebase';  this will need to be connected to the database eventually. 
 import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
+import firebase from 'firebase';
 
-
+const db = firebase.firestore();
 
 class TaskForm extends Component {
 
 
     constructor(){
+
         super()
         this.state = {
             creatorId:'',
             creatorName:'',
-            discription:'',
-            perferredDate:''
+            description:'',
+            perferredDate:'',
+            subject:''
         }
-        // this.handleChange = this.handleChange.bind(this);
-        // this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
     render(){
 
@@ -34,7 +37,7 @@ class TaskForm extends Component {
                 <form onSubmit={this.handleSubmit}> 
             
                 <TextField  
-                name='First Name'
+                name='creatorName'
                 value={this.state.creatorName}
                 onChange={this.handleChange}
                 id="outlined-full-width"
@@ -48,8 +51,8 @@ class TaskForm extends Component {
                 }}
                 />
                 <TextField  
-                name='Subject'
-                value={this.state.creatorName}
+                name='subject'
+                value={this.state.subject}
                 onChange={this.handleChange}
                 id="outlined-full-width"
                 label="Subject"
@@ -62,8 +65,8 @@ class TaskForm extends Component {
                 }}
                 />
                 <TextField  
-                name=' task description'
-                value={this.state.discription}
+                name='description'
+                value={this.state.description}
                 onChange={this.handleChange}
                 id="outlined-multiline-flexible"
                 label="task description"
@@ -77,14 +80,39 @@ class TaskForm extends Component {
                 shrink: true,
                 }}
                 />
-                <Button variant="outlined" size="medium" color="primary">
+                <Button type='submit' variant="outlined" size="medium" color="primary">
                     Submit
                 </Button>
                 </form>
-
           </div>
         )
     }
+
+    handleChange(event){
+        this.setState({
+            [event.target.name] : event.target.value
+        })
+    }
+
+    handleSubmit(event){
+        event.preventDefault();
+      
+        db.collection('tasks').doc()
+        .set({
+            creatorName:this.state.creatorName,
+            description:this.state.description,
+            subject:this.state.subject
+        })
+        .then( () => 
+        this.setState({
+            creatorId:'',
+            creatorName:'',
+            description:'',
+            perferredDate:'',
+            subject:''
+        }))
+    }
+
 
 }
 export default connect(null)(TaskForm)
